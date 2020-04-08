@@ -4,25 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2E4B79"
+    android:background="#476BA7"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txtTtS2"
+        android:layout_width="331dp"
+        android:layout_height="114dp"
+        android:gravity="center|center_vertical"
+        android:text="Tap anywhere to start!"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:translationX="40dp"
+        android:translationY="450dp"
+        android:typeface="normal"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/obRS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Tap The Square"
-        android:textColor="#FFFFFFFF"
-        android:textSize="32dp" />
+        android:background="#FF3232"
+        android:clickable="false"
+        android:scaleX=".25"
+        android:scaleY=".45"
+        android:textColor="#FF0000"
+        android:translationX="180dp"
+        android:translationY="295dp" />
 
     <TextView
+        android:id="@+id/txtTtS"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:gravity="center|center_vertical"
+        android:text="Tap the Square"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:translationY="50dp"
+        android:typeface="normal"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/txtInstructions"
+        android:layout_width="315dp"
+        android:layout_height="178dp"
+        android:gravity="center"
+        android:text="Instructions: Tap the screen whenever the      square meets the      square"
+        android:textColor="#FCFCFC"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:translationX="50dp"
+        android:translationY="200dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/ObBS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Instructions: Tap blue square when it touches red square."
-        android:layout_centerVertical="true"
-        android:textColor="#FFFFFFFF"
-        android:textSize="24dp" />
+        android:background="#32ACFF"
+        android:clickable="false"
+        android:scaleX=".25"
+        android:scaleY=".45"
+        android:textColor="#3F51B5"
+        android:translationX="200dp"
+        android:translationY="267dp" />
 
     <Button
         android:id="@+id/startButton"
@@ -30,6 +77,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Click to Start"/>
+        android:text="Click to Start" />
 
 </RelativeLayout>

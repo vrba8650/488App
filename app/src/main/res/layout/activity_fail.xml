@@ -8,12 +8,56 @@
     tools:context=".fail">
 
     <TextView
+        android:id="@+id/txtYourScore"
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:gravity="center"
+        android:text="Your Score: XXX"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtTryAgain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Placeholder - Fail screen"
-        android:textColor="#FFFFFFFF"
-        android:textSize="32dp" />
+        android:text="Tap to go again!"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:translationX="75dp"
+        android:translationY="300dp" />
+
+    <TextView
+        android:id="@+id/txtQuit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quit"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:translationX="165dp"
+        android:translationY="575dp" />
+
+    <TextView
+        android:id="@+id/txtReminder"
+        android:layout_width="155dp"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:text="Reminder: Tap whem the blue square contacts the red square"
+        android:textColor="#FFFFFF"
+        android:translationX="125dp"
+        android:translationY="630dp" />
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="59dp"
+        android:layout_height="57dp"
+        android:background="#00FFFFFF"
+        android:rotation="180"
+        android:scaleX="2"
+        android:scaleY="-2"
+        android:translationX="350dp"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
 </RelativeLayout>
