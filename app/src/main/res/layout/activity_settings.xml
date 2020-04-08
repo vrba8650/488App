@@ -11,11 +11,51 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Placeholder - settings"
+        android:layout_marginTop="67dp"
+        android:text="SETTINGS"
         android:textColor="#FFFFFFFF"
         android:textSize="32dp" />
+    
+    <Button
+        android:id="@+id/resetScoreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginLeft="153dp"
+        android:layout_marginTop="301dp"
+        android:text="Reset Score" />
+
+    <Button
+        android:id="@+id/quitButton"
+        android:layout_width="113dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginLeft="153dp"
+        android:layout_marginTop="406dp"
+        android:text="Quit" />
+
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginLeft="153dp"
+        android:layout_marginTop="353dp"
+        android:text="Return" />
 
 
 
