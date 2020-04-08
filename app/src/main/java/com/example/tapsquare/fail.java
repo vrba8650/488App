@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 public class fail extends AppCompatActivity {
     private ImageButton settings;
     private Button quit;
+    private Button again;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,22 @@ public class fail extends AppCompatActivity {
                 openMainActivity();
             }
         });
+
+        //Try Again button
+        again = (Button) findViewById(R.id.TryAgainButton);
+        settings.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openPlayActivity();
+            }
+        });
+
+    }
+
+    public void openPlayActivity(){
+        Intent intent = new Intent(this, play_screen.class);
+        startActivity(intent);
+
     }
 
     public void openMainActivity(){

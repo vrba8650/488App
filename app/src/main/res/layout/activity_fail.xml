@@ -28,6 +28,14 @@
         android:translationX="75dp"
         android:translationY="300dp" />
 
+    <Button
+        android:id="@+id/TryAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="441dp"
+        android:text="Again" />
+
     <TextView
         android:id="@+id/txtQuit"
         android:layout_width="wrap_content"
@@ -38,12 +46,13 @@
         android:textStyle="bold"
         android:translationX="165dp"
         android:translationY="575dp" />
+
     <Button
         android:id="@+id/quitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="111dp"
         android:text="quit" />
 
     <TextView
