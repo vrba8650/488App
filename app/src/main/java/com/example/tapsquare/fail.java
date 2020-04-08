@@ -29,7 +29,7 @@ public class fail extends AppCompatActivity {
 
         //quit button
         quit = (Button) findViewById(R.id.quitButton);
-        settings.setOnClickListener(new View.OnClickListener(){
+        quit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 openMainActivity();
@@ -38,7 +38,7 @@ public class fail extends AppCompatActivity {
 
         //Try Again button
         again = (Button) findViewById(R.id.TryAgainButton);
-        settings.setOnClickListener(new View.OnClickListener(){
+        again.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 openPlayActivity();
