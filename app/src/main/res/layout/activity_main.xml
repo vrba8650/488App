@@ -79,4 +79,15 @@
         android:layout_centerHorizontal="true"
         android:text="Click to Start" />
 
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="59dp"
+        android:layout_height="57dp"
+        android:background="#00FFFFFF"
+        android:rotation="180"
+        android:scaleX="2"
+        android:scaleY="-2"
+        android:translationX="350dp"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
 </RelativeLayout>

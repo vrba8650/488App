@@ -15,6 +15,8 @@ public class settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        //return to current game button
         returnButton = (Button) findViewById(R.id.returnButton);
         returnButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -23,6 +25,7 @@ public class settings extends AppCompatActivity {
             }
         });
 
+        //return to home screen button
         quit = (Button) findViewById(R.id.quitButton);
         quit.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -32,11 +35,13 @@ public class settings extends AppCompatActivity {
         });
     }
 
+    //return to currently loaded game
     public void openReturnActivity(){
         Intent intent = new Intent(this, play_screen.class);
         startActivity(intent);
     }
 
+    //return to home screen
     public void openMainActivity(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

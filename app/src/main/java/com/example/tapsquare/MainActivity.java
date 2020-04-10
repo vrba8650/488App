@@ -6,13 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-private Button button;
+    private Button button;
+    private ImageButton settings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //play button
         button = (Button) findViewById(R.id.startButton);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -20,10 +24,26 @@ private Button button;
                 openPlayActivity();
             }
         });
+
+        //settings button
+        settings = (ImageButton) findViewById(R.id.btnSettings);
+        settings.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openSettingsActivity();
+            }
+        });
     }
 
+    //launch play
     public void openPlayActivity(){
         Intent intent = new Intent(this, play_screen.class);
+        startActivity(intent);
+    }
+
+    //open settings
+    public void openSettingsActivity(){
+        Intent intent = new Intent(this, settings.class);
         startActivity(intent);
     }
 }

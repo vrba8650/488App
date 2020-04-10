@@ -27,6 +27,7 @@ public class play_screen extends AppCompatActivity {
         });
 
         //fail test
+        //temporary button used to test fail trigger
         fail = (Button) findViewById(R.id.FailButton);
         fail.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -36,11 +37,15 @@ public class play_screen extends AppCompatActivity {
         });
 
     }
+
+    //launch settings
     public void openSettingsActivity(){
         Intent intent = new Intent(this, settings.class);
         startActivity(intent);
     }
 
+    //trigger for failure
+    //this will be changed later on to activate when play == false
     public void openFailActivity(){
         Intent intent = new Intent(this, fail.class);
         startActivity(intent);

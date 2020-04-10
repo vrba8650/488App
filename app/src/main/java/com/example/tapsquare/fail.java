@@ -47,18 +47,22 @@ public class fail extends AppCompatActivity {
 
     }
 
+    //restart game with score = 0
+    //reinitalize play state here (play = true)
     public void openPlayActivity(){
         Intent intent = new Intent(this, play_screen.class);
         startActivity(intent);
 
     }
 
+    //launch home screen
     public void openMainActivity(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
     }
 
+    //launch settings
     public void openSettingsActivity() {
         Intent intent = new Intent(this, settings.class);
         startActivity(intent);
