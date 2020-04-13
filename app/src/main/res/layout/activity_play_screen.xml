@@ -35,8 +35,7 @@
         android:scaleX=".25"
         android:scaleY=".45"
         android:textColor="#3F51B5"
-        android:translationX="200dp"
-        android:translationY="267dp" />
+         />
 
 
     <Button

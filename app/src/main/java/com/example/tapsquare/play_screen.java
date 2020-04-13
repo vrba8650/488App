@@ -30,7 +30,7 @@ public class play_screen extends AppCompatActivity {
 
 
     //initalize
-    private Handler handeler = new Handler();
+    private Handler handler = new Handler();
     private Timer timer = new Timer();
 
     @Override
@@ -47,6 +47,9 @@ public class play_screen extends AppCompatActivity {
         Point size = new Point();
         disp.getSize(size);
         screenWidth = size.x;
+
+        //inital position
+        blueSq.setX(200);
 
 
         //start timer
