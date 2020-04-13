@@ -56,7 +56,7 @@ public class play_screen extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                handeler.post(new Runnable() {
+                handler.post(new Runnable() {
                     @Override
                     public void run() {
                         changePos();
