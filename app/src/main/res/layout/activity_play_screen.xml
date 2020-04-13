@@ -27,7 +27,7 @@
         app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
     <Button
-        android:id="@+id/ObBS"
+        android:id="@+id/blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#32ACFF"
