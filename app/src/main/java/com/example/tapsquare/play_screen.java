@@ -113,6 +113,10 @@ public class play_screen extends AppCompatActivity {
             bluePosX += 10;
 
         }
+        if(blueSq.getX() + blueSq.getWidth() > 450){
+            bluePosX -= 10;
+
+        }
 
     }
 }
