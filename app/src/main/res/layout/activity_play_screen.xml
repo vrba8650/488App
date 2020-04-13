@@ -10,10 +10,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:text="Placeholder - Playing Area"
         android:textColor="#FFFFFFFF"
+        android:layout_marginTop="551dp"
         android:textSize="32dp" />
 
     <ImageButton
@@ -28,6 +27,19 @@
         app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
     <Button
+        android:id="@+id/ObBS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32ACFF"
+        android:clickable="false"
+        android:scaleX=".25"
+        android:scaleY=".45"
+        android:textColor="#3F51B5"
+        android:translationX="200dp"
+        android:translationY="267dp" />
+
+
+    <Button
         android:id="@+id/FailButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +49,7 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="153dp"
         android:layout_marginLeft="153dp"
-        android:layout_marginTop="301dp"
+        android:layout_marginTop="601dp"
         android:text="Fail Test" />
 
 </RelativeLayout>
