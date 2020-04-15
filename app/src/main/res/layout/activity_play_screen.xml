@@ -26,17 +26,6 @@
         android:translationX="350dp"
         app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
-    <Button
-        android:id="@+id/blue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#32ACFF"
-        android:clickable="false"
-        android:scaleX=".25"
-        android:scaleY=".45"
-        android:textColor="#3F51B5"
-         />
-
 
     <Button
         android:id="@+id/FailButton"
@@ -50,5 +39,12 @@
         android:layout_marginLeft="153dp"
         android:layout_marginTop="601dp"
         android:text="Fail Test" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="drawable/blueSquare"
+        android:id="@+id/blue"></ImageView>
+
 
 </RelativeLayout>

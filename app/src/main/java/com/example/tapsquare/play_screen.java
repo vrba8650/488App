@@ -22,7 +22,7 @@ public class play_screen extends AppCompatActivity {
     private int screenWidth;
 
     //objects
-    private Button blueSq;
+    private ImageView blueSq;
 
 
     //position
@@ -39,7 +39,7 @@ public class play_screen extends AppCompatActivity {
         setContentView(R.layout.activity_play_screen);
 
         //blue square
-        blueSq = (Button)findViewById(R.id.blue);
+        blueSq = (ImageView)findViewById(R.id.blue);
 
         //get screen size
         WindowManager wm = getWindowManager();
@@ -126,7 +126,7 @@ public class play_screen extends AppCompatActivity {
         if(blueSq.getX() +blueSq.getWidth() < 50){
             bluePosX += 10;
         }
-        
+
         if(blueSq.getX() + blueSq.getWidth() > 450){
             bluePosX -= 10;
         }
