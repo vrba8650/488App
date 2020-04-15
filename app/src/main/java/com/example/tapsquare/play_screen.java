@@ -52,14 +52,7 @@ public class play_screen extends AppCompatActivity {
         blueSq.setX(200);
 
         //Make the blue button move
-        for(int i=0; i<6400000;i++)
-        {
-            changePos();
-            if(i==2)
-            {
-                i--;
-            }
-        }
+        loop();
 
         //start timer
 
@@ -104,6 +97,18 @@ public class play_screen extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void loop()
+    {
+        for(int i=0; i<640000;i++)
+        {
+            changePos();
+            if(i==2)
+            {
+                i--;
+            }
+        }
     }
 
     //launch settings
