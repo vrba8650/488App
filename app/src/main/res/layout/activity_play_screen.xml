@@ -41,10 +41,13 @@
         android:text="Fail Test" />
 
     <ImageView
+        android:id="@+id/blue"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="drawable/blueSquare"
-        android:id="@+id/blue"></ImageView>
+        android:src="drawable/bluesquare"
+        android:visibility="visible"
+        app:srcCompat="@drawable/bluesquare"
+        tools:visibility="visible" />
 
 
 </RelativeLayout>
