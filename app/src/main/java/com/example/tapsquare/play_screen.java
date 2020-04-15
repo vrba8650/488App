@@ -51,8 +51,20 @@ public class play_screen extends AppCompatActivity {
         //inital position
         blueSq.setX(200);
 
+        //Make the blue button move
+        for(int i=0; i<6400000;i++)
+        {
+            changePos();
+            if(i==2)
+            {
+                i--;
+            }
+        }
 
         //start timer
+
+
+        /*
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -64,7 +76,7 @@ public class play_screen extends AppCompatActivity {
                 });
             }
             }, 0, 20);
-
+*/
 
 
 
