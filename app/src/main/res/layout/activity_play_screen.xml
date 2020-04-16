@@ -42,13 +42,11 @@
 
 
     <ImageView
-        android:id="@+id/blue"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="drawable/bluesquare"
-        android:visibility="visible"
-        app:srcCompat="@drawable/bluesquare"
-        tools:visibility="visible" />
+        android:id="@+id/bluesquareobject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/blue_square"
+        />
 
 
 </RelativeLayout>

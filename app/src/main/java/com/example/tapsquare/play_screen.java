@@ -20,13 +20,17 @@ public class play_screen extends AppCompatActivity {
     private ImageButton settings;
     private Button fail;
     private int screenWidth;
+    private int screenHeight;
+
+    //image
+    private ImageView blueSquare;
 
     //objects
-    private ImageView blueSq;
+
 
 
     //position
-    private float bluePosX;
+    private float blueSquareX;
 
 
     //initalize
@@ -39,7 +43,7 @@ public class play_screen extends AppCompatActivity {
         setContentView(R.layout.activity_play_screen);
 
         //blue square
-        blueSq = (ImageView)findViewById(R.id.blue);
+        blueSquare = (ImageView)findViewById(R.id.bluesquareobject);
 
         //get screen size
         WindowManager wm = getWindowManager();
@@ -47,13 +51,13 @@ public class play_screen extends AppCompatActivity {
         Point size = new Point();
         disp.getSize(size);
         screenWidth = size.x;
+        screenHeight = size.y;
 
-        //inital position
-        blueSq.setX(200);
+        //move out of screen
+        blueSquare.setX(-80.0f);
 
 
         //start timer
-
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -64,11 +68,7 @@ public class play_screen extends AppCompatActivity {
                     }
                 });
             }
-            }, 0, 20);
-
-
-
-
+        }, 0, 100);
 
 
 
@@ -94,17 +94,7 @@ public class play_screen extends AppCompatActivity {
 
     }
 
-    public void loop()
-    {
-        for(int i=0; i<640000;i++)
-        {
-            changePos();
-            if(i==2)
-            {
-                i--;
-            }
-        }
-    }
+
 
     //launch settings
     public void openSettingsActivity(){
@@ -122,19 +112,13 @@ public class play_screen extends AppCompatActivity {
 
     //object movement
     public void changePos(){
-        //blue square left
-        if(blueSq.getX() +blueSq.getWidth() < 50){
-            bluePosX += 10;
-        }
+        blueSquareX -=20;
+        if(blueSquare.getX() + blueSquare.getHeight() < 0){
+            blueSquareX = (float)Math.floor(Math.random() * (screenWidth - blueSquare.getWidth()));
 
-        if(blueSq.getX() + blueSq.getWidth() > 450){
-            bluePosX -= 10;
         }
-
-        else
-        {
-            bluePosX -= 10;
-        }
-
+        blueSquare.setX(blueSquareX);
     }
+
+
 }
