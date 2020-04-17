@@ -134,7 +134,7 @@ public class play_screen extends AppCompatActivity {
 
 
         //Turns the square to the right or left
-        if(blueSquare.getX() + blueSquare.getHeight() < 30){
+        if(blueSquare.getX() + blueSquare.getHeight() < 60){
             //blueSquareX = (float)Math.floor(Math.random() * (screenWidth - blueSquare.getWidth()));
             blueSquareX +=20;
             this.movingLeft=false;
