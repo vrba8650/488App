@@ -60,7 +60,7 @@
         android:layout_width="155dp"
         android:layout_height="67dp"
         android:gravity="center"
-        android:text="Reminder: Tap whem the blue square contacts the red square"
+        android:text="Reminder: Tap when the blue square contacts the red square"
         android:textColor="#FFFFFF"
         android:translationX="125dp"
         android:translationY="530dp" />
