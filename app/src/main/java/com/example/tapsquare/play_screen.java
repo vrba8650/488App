@@ -21,6 +21,8 @@ public class play_screen extends AppCompatActivity {
     private Button fail;
     private int screenWidth;
     private int screenHeight;
+    boolean movingRight=false;
+    boolean movingLeft=false;
 
     //image
     private ImageView blueSquare;
@@ -55,6 +57,7 @@ public class play_screen extends AppCompatActivity {
 
         //move out of screen
         blueSquare.setX(-80.0f);
+        blueSquare.setY(300.0f);
 
 
         //start timer
@@ -64,7 +67,7 @@ public class play_screen extends AppCompatActivity {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        changePos();
+                        changePos(movingRight,movingLeft);
                     }
                 });
             }
@@ -111,11 +114,34 @@ public class play_screen extends AppCompatActivity {
 
 
     //object movement
-    public void changePos(){
-        blueSquareX -=20;
-        if(blueSquare.getX() + blueSquare.getHeight() < 0){
-            blueSquareX = (float)Math.floor(Math.random() * (screenWidth - blueSquare.getWidth()));
+    public void changePos(boolean movingRight, boolean movingLeft){
 
+
+        //Turns the square to the right or left
+        if(blueSquare.getX() + blueSquare.getHeight() < 0){
+            //blueSquareX = (float)Math.floor(Math.random() * (screenWidth - blueSquare.getWidth()));
+            movingLeft=false;
+            movingRight=true;
+        }
+        else if((blueSquare.getX() + blueSquare.getHeight() > screenWidth))
+        {
+            blueSquareX -=20;
+            movingRight=false;
+            movingLeft=true;
+        }
+
+        //Set Movements
+        if(movingRight==true)
+        {
+            blueSquareX +=20;
+        }
+        else if(movingLeft==true)
+        {
+            blueSquareX -=20;
+        }
+        else
+        {
+            blueSquareX -=20;
         }
         blueSquare.setX(blueSquareX);
     }
