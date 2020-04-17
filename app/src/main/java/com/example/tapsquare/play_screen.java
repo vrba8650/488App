@@ -21,8 +21,8 @@ public class play_screen extends AppCompatActivity {
     private Button fail;
     private int screenWidth;
     private int screenHeight;
-    boolean movingRight=false;
-    boolean movingLeft=false;
+    private boolean movingRight=false;
+    private boolean movingLeft=false;
 
     //image
     private ImageView blueSquare;
@@ -67,7 +67,7 @@ public class play_screen extends AppCompatActivity {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        changePos(movingRight,movingLeft);
+                        changePos();
                     }
                 });
             }
@@ -114,14 +114,14 @@ public class play_screen extends AppCompatActivity {
 
 
     //object movement
-    public void changePos(boolean movingRight, boolean movingLeft){
+    public void changePos(){
         //Set Movements
-        if(movingRight==true)
+        if(this.movingRight==true)
         {
             blueSquareX +=20;
             blueSquare.setX(blueSquareX);
         }
-        else if(movingLeft==true)
+        else if(this.movingLeft==true)
         {
             blueSquareX -=20;
             blueSquare.setX(blueSquareX);
@@ -136,15 +136,15 @@ public class play_screen extends AppCompatActivity {
         //Turns the square to the right or left
         if(blueSquare.getX() + blueSquare.getHeight() < 0){
             //blueSquareX = (float)Math.floor(Math.random() * (screenWidth - blueSquare.getWidth()));
-            blueSquareX +=80;
-            movingLeft=false;
-            movingRight=true;
+            blueSquareX +=20;
+            this.movingLeft=false;
+            this.movingRight=true;
             blueSquare.setX(blueSquareX);
         }
         else if((blueSquare.getX() + blueSquare.getHeight() > screenWidth)) {
             blueSquareX -= 20;
-            movingRight = false;
-            movingLeft = true;
+            this.movingRight = false;
+            this.movingLeft = true;
             blueSquare.setX(blueSquareX);
         }
     }
