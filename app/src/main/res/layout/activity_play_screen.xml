@@ -8,11 +8,12 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txtSuccessorFail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="551dp"
         android:text="Placeholder - Playing Area"
         android:textColor="#FFFFFFFF"
-        android:layout_marginTop="551dp"
         android:textSize="32dp" />
 
     <ImageButton
@@ -35,11 +36,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="153dp"
-        android:layout_marginLeft="153dp"
-        android:layout_marginTop="601dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginTop="440dp"
         android:text="Fail Test" />
-
 
     <ImageView
         android:id="@+id/imageView"

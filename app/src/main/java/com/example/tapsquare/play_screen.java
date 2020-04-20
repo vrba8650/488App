@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -25,12 +26,19 @@ public class play_screen extends AppCompatActivity {
     private boolean movingRight=false;
     private boolean movingLeft=false;
 
+    private float blueSquareLeftBound;
+    private float blueSquareRightBound;
+
+    private float redSquareLeftBound;
+
+
+
     //image
     private ImageView blueSquare;
     private ImageView redSquare;
 
     //objects
-
+    private TextView successorfail;
 
 
     //position
@@ -68,6 +76,7 @@ public class play_screen extends AppCompatActivity {
         Random rd = new Random();
         float positionRed = rd.nextFloat() * (screenWidth - 60) + 60;
         redSquare.setX(positionRed);
+        redSquareLeftBound=redSquare.getX()-50;
 
 
         //start timer
@@ -118,8 +127,24 @@ public class play_screen extends AppCompatActivity {
     //trigger for failure
     //this will be changed later on to activate when play == false
     public void openFailActivity(){
-        Intent intent = new Intent(this, fail.class);
-        startActivity(intent);
+
+        successorfail = (TextView)findViewById(R.id.txtSuccessorFail);
+
+        if(redSquare.getX()<blueSquareRightBound && redSquareLeftBound > blueSquareLeftBound)
+        {
+            successorfail.setText("Winner");
+        }
+
+        else if(redSquare.getX()<blueSquareRightBound && redSquareLeftBound > blueSquareRightBound)
+        {
+            successorfail.setText("Winner");
+        }
+
+        else
+        {
+            Intent intent = new Intent(this, fail.class);
+            startActivity(intent);
+        }
     }
 
 
@@ -157,6 +182,9 @@ public class play_screen extends AppCompatActivity {
             this.movingLeft = true;
             blueSquare.setX(blueSquareX);
         }
+        blueSquareRightBound = blueSquare.getX();
+        blueSquareLeftBound = blueSquare.getX()-45;
+
     }
 
 
