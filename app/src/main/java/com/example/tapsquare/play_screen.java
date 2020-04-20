@@ -59,7 +59,7 @@ public class play_screen extends AppCompatActivity {
         screenHeight = size.y;
 
         //move out of screen
-        blueSquare.setX(-80.0f);
+        blueSquare.setX(-77.5f);
         blueSquare.setY(600.0f);
 
         redSquare.setY(600.0f);
