@@ -52,7 +52,7 @@
         android:layout_marginRight="0dp"
         android:layout_marginBottom="677dp"
         android:scaleX="200"
-        android:translationY="335dp"
+        android:translationY="352dp"
         app:srcCompat="@android:drawable/bottom_bar" />
 
     <ImageView
@@ -60,6 +60,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/blue_square" />
+
+    <ImageView
+        android:id="@+id/redsquareobject"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="365dp"
+        android:layout_marginRight="365dp"
+        app:srcCompat="@drawable/red_square" />
 
 
 </RelativeLayout>

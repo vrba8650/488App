@@ -15,6 +15,7 @@ import android.widget.ImageView;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.Random;
 
 public class play_screen extends AppCompatActivity {
     private ImageButton settings;
@@ -26,6 +27,7 @@ public class play_screen extends AppCompatActivity {
 
     //image
     private ImageView blueSquare;
+    private ImageView redSquare;
 
     //objects
 
@@ -46,6 +48,7 @@ public class play_screen extends AppCompatActivity {
 
         //blue square
         blueSquare = (ImageView)findViewById(R.id.bluesquareobject);
+        redSquare = (ImageView)findViewById(R.id.redsquareobject);
 
         //get screen size
         WindowManager wm = getWindowManager();
@@ -58,6 +61,13 @@ public class play_screen extends AppCompatActivity {
         //move out of screen
         blueSquare.setX(-80.0f);
         blueSquare.setY(600.0f);
+
+        redSquare.setY(600.0f);
+
+        //set random float for red square start
+        Random rd = new Random();
+        float positionRed = rd.nextFloat() * (screenWidth - 60) + 60;
+        redSquare.setX(positionRed);
 
 
         //start timer
