@@ -130,12 +130,17 @@ public class play_screen extends AppCompatActivity {
 
         successorfail = (TextView)findViewById(R.id.txtSuccessorFail);
 
-        if(redSquare.getRight()<blueSquareRightBound && redSquareLeftBound > blueSquareLeftBound)
+        if(redSquare.getRight()<blueSquareRightBound && redSquare.getLeft() > blueSquareLeftBound)
         {
             successorfail.setText("Winner");
         }
 
-        else if(redSquare.getRight()<blueSquareRightBound && redSquareLeftBound > blueSquareRightBound)
+        else if(redSquare.getRight()<blueSquareRightBound)// && redSquareLeftBound > blueSquareRightBound)
+        {
+            successorfail.setText("Winner");
+        }
+
+        else if(redSquare.getLeft()>blueSquareLeftBound && redSquare.getRight()<blueSquareLeftBound)
         {
             successorfail.setText("Winner");
         }
