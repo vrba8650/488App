@@ -76,7 +76,7 @@ public class play_screen extends AppCompatActivity {
         Random rd = new Random();
         float positionRed = rd.nextFloat() * (screenWidth - 60) + 60;
         redSquare.setX(positionRed);
-        redSquareLeftBound=redSquare.getX()-50;
+        redSquareLeftBound=redSquare.getRight()-50;
 
 
         //start timer
@@ -130,12 +130,12 @@ public class play_screen extends AppCompatActivity {
 
         successorfail = (TextView)findViewById(R.id.txtSuccessorFail);
 
-        if(redSquare.getX()<blueSquareRightBound && redSquareLeftBound > blueSquareLeftBound)
+        if(redSquare.getRight()<blueSquareRightBound && redSquareLeftBound > blueSquareLeftBound)
         {
             successorfail.setText("Winner");
         }
 
-        else if(redSquare.getX()>blueSquareRightBound && redSquareLeftBound < blueSquareRightBound)
+        else if(redSquare.getRight()>blueSquareRightBound && redSquareLeftBound < blueSquareRightBound)
         {
             successorfail.setText("Winner");
         }
@@ -182,7 +182,7 @@ public class play_screen extends AppCompatActivity {
             this.movingLeft = true;
             blueSquare.setX(blueSquareX);
         }
-        blueSquareRightBound = blueSquare.getX();
+        blueSquareRightBound = blueSquare.getRight();
         blueSquareLeftBound = blueSquare.getX()-45;
 
     }
