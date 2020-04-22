@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="551dp"
-        android:text="Tap It3"
+        android:text="Tap It4"
         android:textColor="#FFFFFFFF"
         android:textSize="32dp" />
 

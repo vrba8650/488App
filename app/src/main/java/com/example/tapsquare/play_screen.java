@@ -130,17 +130,9 @@ public class play_screen extends AppCompatActivity {
 
         successorfail = (TextView)findViewById(R.id.txtSuccessorFail);
 
-        if(redSquare.getRight()<blueSquareRightBound && redSquare.getLeft() > blueSquareLeftBound)
-        {
-            successorfail.setText("Winner");
-        }
-
-        else if(redSquare.getRight()>blueSquareRightBound && redSquareLeftBound < blueSquareRightBound)
-        {
-            successorfail.setText("Winner");
-        }
-
-        else if(redSquare.getLeft()>blueSquareLeftBound && redSquare.getRight()<blueSquareLeftBound)
+        //Check to see if the right side of the blue square is to the left of the right side of the red square
+        //Check to see if the right side of the red square is less that the left side of the blue square
+        if(redSquare.getRight()<blueSquareRightBound && redSquare.getLeft() > blueSquareRightBound)
         {
             successorfail.setText("Winner");
         }
