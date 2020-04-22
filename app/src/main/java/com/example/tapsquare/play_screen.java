@@ -135,7 +135,7 @@ public class play_screen extends AppCompatActivity {
             successorfail.setText("Winner");
         }
 
-        else if(redSquare.getRight()<blueSquareRightBound)// && redSquareLeftBound > blueSquareRightBound)
+        else if(redSquare.getRight()>blueSquareRightBound)// && redSquareLeftBound > blueSquareRightBound)
         {
             successorfail.setText("Winner");
         }
