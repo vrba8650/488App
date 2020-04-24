@@ -74,7 +74,7 @@ public class play_screen extends AppCompatActivity {
 
         //set random float for red square start
         Random rd = new Random();
-        float positionRed = rd.nextFloat() * (screenWidth - 60) + 60;
+        float positionRed = rd.nextFloat() * (screenWidth - 100) + 100;
         redSquare.setX(positionRed);
         redSquareLeftBound=redSquare.getLeft();
 
