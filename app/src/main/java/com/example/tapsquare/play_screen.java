@@ -132,7 +132,7 @@ public class play_screen extends AppCompatActivity {
 
         //Check to see if the right side of the blue square is to the left of the right side of the red square
         //Check to see if the right side of the red square is less that the left side of the blue square
-        if(blueSquare.getX() < redSquare.getX() -100 && blueSquare.getX() < redSquare.getX() + 100)
+        if(blueSquare.getX() > redSquare.getX() -100 && blueSquare.getX() < redSquare.getX() + 100)
         //if(redSquare.getRight()<blueSquareRightBound && redSquare.getLeft() > blueSquareRightBound)
         {
             successorfail.setText("Winner");
