@@ -8,13 +8,36 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class MainActivity extends AppCompatActivity {
     private Button button;
     private ImageButton settings;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //import the score
+        try {
+            Scanner input = new Scanner(new File("score.txt"));
+            int score = input.nextInt();
+
+            score classScore = new score();
+            classScore.setScore(score);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
 
         //play button
         button = (Button) findViewById(R.id.startButton);

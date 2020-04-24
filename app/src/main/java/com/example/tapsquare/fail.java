@@ -7,16 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class fail extends AppCompatActivity {
     private ImageButton settings;
     private Button quit;
     private Button again;
+    private TextView txtYourScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fail);
+
+        txtYourScore= (TextView)findViewById(R.id.txtYourScore);
+
+        score score = new score();
+        txtYourScore.setText("Your score:"+score.getScore());
 
         //setting button
         settings = (ImageButton) findViewById(R.id.btnSettings);
