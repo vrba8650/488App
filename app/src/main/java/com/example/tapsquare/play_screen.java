@@ -135,6 +135,8 @@ public class play_screen extends AppCompatActivity {
         {
             successorfail.setText("Winner");
             blueSquareX = blueSquareX +20;
+            score score = new score();
+            score.setScore(10);
             //incriment score here
             //respawn red square here
             //increase blue square speed (difficulty) here

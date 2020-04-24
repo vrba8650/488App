@@ -11,7 +11,7 @@ public class score {
 
     public void setScore(int score_)
     {
-        this.score=score_;
+        this.score+=score_;
     }
 
 }
