@@ -134,6 +134,10 @@ public class play_screen extends AppCompatActivity {
         if(blueSquare.getX() > redSquare.getX() -100 && blueSquare.getX() < redSquare.getX() + 100)
         {
             successorfail.setText("Winner");
+            blueSquareX = blueSquareX +20;
+            //incriment score here
+            //respawn red square here
+            //increase blue square speed (difficulty) here
         }
 
         else
