@@ -2,7 +2,7 @@ package com.example.tapsquare;
 
 public class score {
 
-    private int score;
+    private int score=0;
 
     public int getScore()
     {
