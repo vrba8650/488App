@@ -79,6 +79,8 @@ public class play_screen extends AppCompatActivity {
         redSquareLeftBound=redSquare.getLeft();
 
         //set the score
+        score score = new score();
+        successorfail.setText("Score: "+score.getScore());
 
         //start timer
         timer.schedule(new TimerTask() {

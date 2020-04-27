@@ -23,12 +23,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        BufferedReader reader;
+
         //import the score
         try {
-            Scanner input = new Scanner(new File("score.txt"));
-            int score = input.nextInt();
+            reader = new BufferedReader(new FileReader("score.txt"));
+            String input = reader.readLine();
 
             score classScore = new score();
+            int score=Integer.parseInt(input);
             classScore.setScore(score);
 
 
