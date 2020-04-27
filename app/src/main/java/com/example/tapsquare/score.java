@@ -18,7 +18,7 @@ public class score {
             String input = reader.readLine();
 
             int scoreFile = Integer.parseInt(input);
-            this.score=scoreFile;
+            this.score=500;
 
         } catch(
         IOException e)
