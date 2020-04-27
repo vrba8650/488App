@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         BufferedReader reader;
 
-        //import the score
+       /* //import the score
         try {
             reader = new BufferedReader(new FileReader("score.txt"));
             String input = reader.readLine();
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+*/
 
 
 
