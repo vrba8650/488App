@@ -78,6 +78,7 @@ public class play_screen extends AppCompatActivity {
         redSquare.setX(positionRed);
         redSquareLeftBound=redSquare.getLeft();
 
+        //set the score
 
         //start timer
         timer.schedule(new TimerTask() {
@@ -133,9 +134,9 @@ public class play_screen extends AppCompatActivity {
         //red square hitbox
         if(blueSquare.getX() > redSquare.getX() -100 && blueSquare.getX() < redSquare.getX() + 100)
         {
-            successorfail.setText("Winner");
-            blueSquareX = blueSquareX +20;
             score score = new score();
+            successorfail.setText("Score: "+score.getScore());
+            blueSquareX = blueSquareX +20;
             score.setScore(10);
             //incriment score here
             //respawn red square here
