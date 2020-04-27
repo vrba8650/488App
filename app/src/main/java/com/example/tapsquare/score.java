@@ -2,11 +2,11 @@ package com.example.tapsquare;
 
 public class score {
 
-    private int score=0;
+    private int score=4545;
 
     public int getScore()
     {
-        return score;
+        return this.score;
     }
 
     public void setScore(int score_)

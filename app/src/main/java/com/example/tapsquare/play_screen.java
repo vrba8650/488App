@@ -80,8 +80,8 @@ public class play_screen extends AppCompatActivity {
 
         //set the score
         successorfail = (TextView)findViewById(R.id.txtSuccessorFail);
-        //score score = new score();
-        successorfail.setText("Score: test1");
+        score score = new score();
+        successorfail.setText("Score: test2"+score.getScore());
 
         //start timer
         timer.schedule(new TimerTask() {
@@ -138,9 +138,9 @@ public class play_screen extends AppCompatActivity {
         if(blueSquare.getX() > redSquare.getX() -100 && blueSquare.getX() < redSquare.getX() + 100)
         {
             score score = new score();
+            score.setScore(10);
             successorfail.setText("Score: "+score.getScore());
             blueSquareX = blueSquareX +20;
-            score.setScore(10);
             //incriment score here
             //respawn red square here
             //increase blue square speed (difficulty) here
