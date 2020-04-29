@@ -3,10 +3,13 @@ package com.example.tapsquare;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
+
 
 public class score {
 
@@ -14,17 +17,17 @@ public class score {
 
     score(){
 
-        try {
-            //import the score
-            BufferedReader br = new BufferedReader(new FileReader("score.txt"));
+        try
+        {
+            File inputFile = new File("score.txt");
+            Scanner inputScanner = new Scanner(inputFile);
 
-            String input = br.readLine();
+            String line = inputScanner.nextLine();
+            this.score = Integer.parseInt(line);
 
-            int scoreFile = Integer.parseInt(input);
-            this.score = scoreFile;
-            br.close();
         }
-        catch(Exception e){}
+
+        catch (FileNotFoundException e){ }
 
     }
 
