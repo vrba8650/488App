@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class score {
 
@@ -16,11 +17,13 @@ public class score {
     score() throws IOException {
 
         //import the score
+        BufferedReader br = new BufferedReader(new FileReader("character.txt"));
+        String line=br.readLine();
 
-        reader = new BufferedReader(new FileReader("score.txt"));
         String input = reader.readLine();
 
         int scoreFile = Integer.parseInt(input);
+        this.score=scoreFile;
         reader.close();
 
     }
@@ -30,13 +33,12 @@ public class score {
         return this.score;
     }
 
-    public void setScore(int score_) throws IOException {
+    public void setScore(int score_) throws FileNotFoundException {
 
         this.score= this.score + score_;
-        writer = new BufferedWriter(new FileWriter("score.txt"));
-        writer .write(this.score);
-
-        writer.close();
+        PrintWriter outputFile = new PrintWriter("score.txt");
+        outputFile.println(this.score);
+        outputFile.close();
 
     }
 
