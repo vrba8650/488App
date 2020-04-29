@@ -1,42 +1,43 @@
 package com.example.tapsquare;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class score {
 
     private int score;
+    BufferedReader reader;
+    BufferedWriter writer;
 
-    score() {
-        BufferedReader reader;
+    score() throws IOException {
+
         //import the score
-            try
 
-        {
-            reader = new BufferedReader(new FileReader("score.txt"));
-            String input = reader.readLine();
+        reader = new BufferedReader(new FileReader("score.txt"));
+        String input = reader.readLine();
 
-            int scoreFile = Integer.parseInt(input);
-            this.score=500;
+        int scoreFile = Integer.parseInt(input);
+        reader.close();
 
-        } catch(
-        IOException e)
-
-        {
-            e.printStackTrace();
-        }
-
-}
+    }
 
     public int getScore()
     {
         return this.score;
     }
 
-    public void setScore(int score_)
-    {
+    public void setScore(int score_) throws IOException {
+
         this.score= this.score + score_;
+        writer = new BufferedWriter(new FileWriter("score.txt"));
+        writer .write(this.score);
+
+        writer.close();
+
     }
 
 }
