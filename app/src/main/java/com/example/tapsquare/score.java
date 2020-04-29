@@ -11,21 +11,18 @@ import java.io.PrintWriter;
 public class score {
 
     private int score;
-    BufferedReader reader;
-    BufferedWriter writer;
 
     score(){
 
         try {
             //import the score
             BufferedReader br = new BufferedReader(new FileReader("score.txt"));
-            String line = br.readLine();
 
-            String input = reader.readLine();
+            String input = br.readLine();
 
             int scoreFile = Integer.parseInt(input);
             this.score = scoreFile;
-            reader.close();
+            br.close();
         }
         catch(Exception e){}
 
