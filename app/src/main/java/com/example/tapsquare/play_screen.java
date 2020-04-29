@@ -81,7 +81,7 @@ public class play_screen extends AppCompatActivity {
         //set the score
         successorfail = (TextView)findViewById(R.id.txtSuccessorFail);
         score score = new score();
-        successorfail.setText("Score: test2"+score.getScore());
+        successorfail.setText("Score: test3 "+score.getScore());
 
         //start timer
         timer.schedule(new TimerTask() {
