@@ -14,17 +14,20 @@ public class score {
     BufferedReader reader;
     BufferedWriter writer;
 
-    score() throws IOException {
+    score(){
 
-        //import the score
-        BufferedReader br = new BufferedReader(new FileReader("character.txt"));
-        String line=br.readLine();
+        try {
+            //import the score
+            BufferedReader br = new BufferedReader(new FileReader("character.txt"));
+            String line = br.readLine();
 
-        String input = reader.readLine();
+            String input = reader.readLine();
 
-        int scoreFile = Integer.parseInt(input);
-        this.score=scoreFile;
-        reader.close();
+            int scoreFile = Integer.parseInt(input);
+            this.score = scoreFile;
+            reader.close();
+        }
+        catch(Exception e){}
 
     }
 
@@ -33,12 +36,15 @@ public class score {
         return this.score;
     }
 
-    public void setScore(int score_) throws FileNotFoundException {
+    public void setScore(int score_) {
 
-        this.score= this.score + score_;
-        PrintWriter outputFile = new PrintWriter("score.txt");
-        outputFile.println(this.score);
-        outputFile.close();
+        try {
+            this.score = this.score + score_;
+            PrintWriter outputFile = new PrintWriter("score.txt");
+            outputFile.println(this.score);
+            outputFile.close();
+        }
+        catch(Exception e){}
 
     }
 

@@ -22,8 +22,13 @@ public class fail extends AppCompatActivity {
 
         txtYourScore= (TextView)findViewById(R.id.txtYourScore);
 
-        score score = new score();
-        txtYourScore.setText("Your score:"+score.getScore());
+        try {
+            score score = new score();
+            txtYourScore.setText("Your score:"+score.getScore());
+        }
+        catch (Exception e){};
+
+
 
         //setting button
         settings = (ImageButton) findViewById(R.id.btnSettings);
