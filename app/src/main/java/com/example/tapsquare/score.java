@@ -18,7 +18,7 @@ public class score {
 
         try {
             //import the score
-            BufferedReader br = new BufferedReader(new FileReader("character.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("score.txt"));
             String line = br.readLine();
 
             String input = reader.readLine();
