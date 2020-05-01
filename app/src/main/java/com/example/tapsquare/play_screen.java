@@ -137,7 +137,6 @@ public class play_screen extends AppCompatActivity {
     public void openFailActivity(){
 
         successorfail = (TextView)findViewById(R.id.txtSuccessorFail);
-        redSquare();
 
         //red square hitbox
         if(blueSquare.getX() > redSquare.getX() -100 && blueSquare.getX() < redSquare.getX() + 100)
@@ -147,6 +146,7 @@ public class play_screen extends AppCompatActivity {
             score.setSpeed(1);
             successorfail.setText("Score: "+score.getScore());
             blueSquareX = blueSquareX +20;
+            redSquare();
 
             //respawn red square here
             //increase blue square speed (difficulty) here
