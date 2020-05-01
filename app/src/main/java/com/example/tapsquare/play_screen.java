@@ -143,7 +143,8 @@ public class play_screen extends AppCompatActivity {
         {
             score score = new score();
             score.setScore(10);
-            score.setSpeed(1);
+            int speed=score.getSpeed()*.3
+            score.setSpeed(speed);
             successorfail.setText("Score: "+score.getScore());
             blueSquareX = blueSquareX +20;
             redSquare();
