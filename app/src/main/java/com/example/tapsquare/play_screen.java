@@ -83,6 +83,7 @@ public class play_screen extends AppCompatActivity {
         score score = new score();
         successorfail.setText("Score: test3 "+score.getScore());
 
+
         //start timer
         timer.schedule(new TimerTask() {
             @Override
@@ -157,6 +158,7 @@ public class play_screen extends AppCompatActivity {
     //object movement
     public void changePos(){
         //Set Movements
+        int speed =score.getSpeed();
         if(this.movingRight==true)
         {
             blueSquareX +=20;
