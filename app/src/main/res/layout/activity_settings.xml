@@ -20,44 +20,42 @@
 
     <Button
         android:id="@+id/resetScoreButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="153dp"
-        android:layout_marginLeft="153dp"
-        android:layout_marginTop="301dp"
-        android:text="Reset Score" />
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="227dp"
+        android:text="Reset" />
 
     <Button
         android:id="@+id/quitButton"
-        android:layout_width="113dp"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="153dp"
-        android:layout_marginLeft="153dp"
-        android:layout_marginTop="406dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginLeft="123dp"
+        android:layout_marginTop="442dp"
         android:text="Quit" />
 
     <Button
         android:id="@+id/returnButton"
-        android:layout_width="114dp"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="153dp"
-        android:layout_marginLeft="153dp"
-        android:layout_marginTop="353dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="335dp"
         android:text="Return" />
-
-
 
 
 </RelativeLayout>
