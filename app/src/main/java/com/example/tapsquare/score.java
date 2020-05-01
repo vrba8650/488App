@@ -1,5 +1,8 @@
 package com.example.tapsquare;
 
+import android.os.Environment;
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
@@ -34,6 +37,29 @@ public class score {
     public void setSpeed(int speed_) {
 
         speed = speed + speed_;
+    }
+
+    public int getHighscore()
+    {
+        int highscore=0;
+        File sdcard = Environment.getExternalStorageDirectory();
+        File file = new File(sdcard,"score.txt");
+
+        StringBuilder text = new StringBuilder();
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+            String aDataRow = "";
+
+            line = br.readLine();
+
+            highscore=Integer.parseInt(line);
+        }
+        catch (IOException e) {
+            //You'll need to add proper error handling here
+        }
+        return highscore;
     }
 
 }
