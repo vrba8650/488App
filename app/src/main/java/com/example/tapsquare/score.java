@@ -13,38 +13,16 @@ import java.util.Scanner;
 
 public class score {
 
-    private int score;
+    private static int score;
 
-    score(){
-
-        try
-        {
-            File inputFile = new File("score.txt");
-            Scanner inputScanner = new Scanner(inputFile);
-
-            String line = inputScanner.nextLine();
-            this.score = Integer.parseInt(line);
-
-        }
-
-        catch (FileNotFoundException e){ }
-
-    }
-
-    public int getScore()
+    public static int getScore()
     {
-        return this.score;
+        return score;
     }
 
     public void setScore(int score_) {
 
-        try {
-            this.score = this.score + score_;
-            PrintWriter outputFile = new PrintWriter("score.txt");
-            outputFile.println(this.score);
-            outputFile.close();
-        }
-        catch(Exception e){}
+        score = score + score_;
 
     }
 
