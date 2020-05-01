@@ -70,13 +70,8 @@ public class play_screen extends AppCompatActivity {
         blueSquare.setX(-80.0f);
         blueSquare.setY(600.0f);
 
-        redSquare.setY(597.5f);
-
-        //set random float for red square start
-        Random rd = new Random();
-        float positionRed = rd.nextFloat() * (screenWidth - 120) + 60;
-        redSquare.setX(positionRed);
-        redSquareLeftBound=redSquare.getLeft();
+        //Spawn the red Square
+        redSquare();
 
         //set the score
         successorfail = (TextView)findViewById(R.id.txtSuccessorFail);
@@ -121,7 +116,15 @@ public class play_screen extends AppCompatActivity {
 
     }
 
-
+    public void redSquare()
+    {
+        redSquare.setY(597.5f);
+        //set random float for red square start
+        Random rd = new Random();
+        float positionRed = rd.nextFloat() * (screenWidth - 120) + 60;
+        redSquare.setX(positionRed);
+        redSquareLeftBound=redSquare.getLeft();
+    }
 
     //launch settings
     public void openSettingsActivity(){
@@ -134,12 +137,14 @@ public class play_screen extends AppCompatActivity {
     public void openFailActivity(){
 
         successorfail = (TextView)findViewById(R.id.txtSuccessorFail);
+        redSquare();
 
         //red square hitbox
         if(blueSquare.getX() > redSquare.getX() -100 && blueSquare.getX() < redSquare.getX() + 100)
         {
             score score = new score();
             score.setScore(10);
+            score.setSpeed(1);
             successorfail.setText("Score: "+score.getScore());
             blueSquareX = blueSquareX +20;
 
@@ -161,17 +166,17 @@ public class play_screen extends AppCompatActivity {
         int speed =score.getSpeed();
         if(this.movingRight==true)
         {
-            blueSquareX +=20;
+            blueSquareX +=speed;
             blueSquare.setX(blueSquareX);
         }
         else if(this.movingLeft==true)
         {
-            blueSquareX -=20;
+            blueSquareX -=speed;
             blueSquare.setX(blueSquareX);
         }
         else
         {
-            blueSquareX -=20;
+            blueSquareX -=speed;
             blueSquare.setX(blueSquareX);
         }
 
@@ -179,13 +184,13 @@ public class play_screen extends AppCompatActivity {
         //Turns the square to the right or left
         if(blueSquare.getX() + blueSquare.getHeight() < 60){
             //blueSquareX = (float)Math.floor(Math.random() * (screenWidth - blueSquare.getWidth()));
-            blueSquareX +=20;
+            blueSquareX +=speed;
             this.movingLeft=false;
             this.movingRight=true;
             blueSquare.setX(blueSquareX);
         }
         else if((blueSquare.getX() + blueSquare.getHeight() > screenWidth)) {
-            blueSquareX -= 20;
+            blueSquareX -= speed;
             this.movingRight = false;
             this.movingLeft = true;
             blueSquare.setX(blueSquareX);
