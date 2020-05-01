@@ -53,6 +53,8 @@ public class settings extends AppCompatActivity {
 
     //return to home screen
     public void openMainActivity(){
+        score.setScore(-score.getScore()); //reset score
+        score.setSpeed(-score.getSpeed() + 20); //reset speed
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
