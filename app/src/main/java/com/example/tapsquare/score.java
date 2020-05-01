@@ -31,7 +31,7 @@ public class score {
         return speed;
     }
 
-    public void setSpeed(int speed_) {
+    public static void setSpeed(int speed_) {
 
         speed = speed + speed_;
     }
