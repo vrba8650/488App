@@ -62,6 +62,7 @@ public class fail extends AppCompatActivity {
     //restart game with score = 0
     //reinitalize play state here (play = true)
     public void openPlayActivity(){
+        score.setScore(-score.getScore());
         Intent intent = new Intent(this, play_screen.class);
         startActivity(intent);
 
