@@ -14,16 +14,26 @@ import java.util.Scanner;
 public class score {
 
     private static int score;
+    private static int speed=20;
 
     public static int getScore()
     {
         return score;
     }
 
-    public void setScore(int score_) {
+    public static void setScore(int score_) {
 
         score = score + score_;
+    }
 
+    public static int getSpeed()
+    {
+        return speed;
+    }
+
+    public void setSpeed(int speed_) {
+
+        speed = speed + speed_;
     }
 
 }

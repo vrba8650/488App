@@ -24,7 +24,7 @@ public class fail extends AppCompatActivity {
 
         try {
             score score = new score();
-            txtYourScore.setText("Your score:"+score.getScore());
+            txtYourScore.setText("Your score: "+score.getScore());
         }
         catch (Exception e){};
 
