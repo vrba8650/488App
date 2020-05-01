@@ -10,6 +10,7 @@ import android.widget.Button;
 public class settings extends AppCompatActivity {
     private Button returnButton;
     private Button quit;
+    private Button reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,15 @@ public class settings extends AppCompatActivity {
                 openMainActivity();
             }
         });
+
+        //reset current game
+        reset = (Button) findViewById(R.id.resetScoreButton);
+        reset.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                ResetPlayScreen();
+            }
+        });
     }
 
     //return to currently loaded game
@@ -44,6 +54,14 @@ public class settings extends AppCompatActivity {
     //return to home screen
     public void openMainActivity(){
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void ResetPlayScreen(){
+        score.setScore(-score.getScore()); //reset score
+        score.setSpeed(-score.getSpeed() + 20); //reset speed
+        Intent intent = new Intent(this, play_screen.class);
         startActivity(intent);
 
     }

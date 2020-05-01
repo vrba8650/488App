@@ -63,6 +63,7 @@ public class fail extends AppCompatActivity {
     //reinitalize play state here (play = true)
     public void openPlayActivity(){
         score.setScore(-score.getScore()); //reset score
+        score.setSpeed(-score.getSpeed() + 20); //reset speed
         Intent intent = new Intent(this, play_screen.class);
         startActivity(intent);
 
@@ -71,6 +72,7 @@ public class fail extends AppCompatActivity {
     //launch home screen
     public void openMainActivity(){
         score.setScore(-score.getScore()); //reset score
+        score.setSpeed(-score.getSpeed() + 20); //reset speed
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
