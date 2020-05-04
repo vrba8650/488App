@@ -121,7 +121,7 @@ public class play_screen extends AppCompatActivity {
         redSquare.setY(597.5f);
         //set random float for red square start
         Random rd = new Random();
-        float positionRed = rd.nextFloat() * (screenWidth - 120) + 60;
+        float positionRed = rd.nextFloat() * (screenWidth - 100) - 20;
         redSquare.setX(positionRed);
         redSquareLeftBound=redSquare.getLeft();
     }
@@ -147,10 +147,9 @@ public class play_screen extends AppCompatActivity {
             score.setSpeed(speed);
             successorfail.setText("Score: "+score.getScore());
             blueSquareX = blueSquareX +20;
-            redSquare();
+            redSquare(); //respawn red square
 
-            //respawn red square here
-            //increase blue square speed (difficulty) here
+
         }
 
         else
@@ -183,7 +182,7 @@ public class play_screen extends AppCompatActivity {
 
 
         //Turns the square to the right or left
-        if(blueSquare.getX() + blueSquare.getHeight() < 60){
+        if(blueSquare.getX() + blueSquare.getHeight() < 100){
             //blueSquareX = (float)Math.floor(Math.random() * (screenWidth - blueSquare.getWidth()));
             blueSquareX +=speed;
             this.movingLeft=false;
