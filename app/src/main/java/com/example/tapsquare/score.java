@@ -10,8 +10,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.Scanner;
+
 
 
 public class score {
@@ -42,22 +44,26 @@ public class score {
     public int getHighscore()
     {
         int highscore=0;
-        File sdcard = Environment.getExternalStorageDirectory();
-        File file = new File(sdcard,"score.txt");
+       // File sdcard = Environment.getExternalStorageDirectory();
+       // File file = new File(sdcard,"score.txt");
+        String line ="";
 
         StringBuilder text = new StringBuilder();
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            String line;
-            String aDataRow = "";
+            Scanner in = new Scanner(new File("score.txt"));
 
-            line = br.readLine();
+            while(in.hasNextLine()) {
+                // Process the line
+                line=in.nextLine();
+            }
+
 
             highscore=Integer.parseInt(line);
         }
         catch (IOException e) {
             //You'll need to add proper error handling here
+            highscore=37707;
         }
         return highscore;
     }
