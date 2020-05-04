@@ -44,14 +44,11 @@ public class score {
     public int getHighscore()
     {
         int highscore=0;
-       // File sdcard = Environment.getExternalStorageDirectory();
-       // File file = new File(sdcard,"score.txt");
+        File sdcard = Environment.getExternalStorageDirectory();
         String line ="";
 
-        StringBuilder text = new StringBuilder();
-
         try {
-            Scanner in = new Scanner(new File("score.txt"));
+            Scanner in = new Scanner(new File(sdcard+"score.txt"));
 
             while(in.hasNextLine()) {
                 // Process the line
